@@ -1,29 +1,29 @@
 import java.util.*;
-import java.io.*;
+import java.io.*;			
 
 class Account
 {
 
-static BufferedReader i = new BufferedReader(new InputStreamReader(System.in));
-static Scanner j = new Scanner(System.in);
+static BufferedReader i = new BufferedReader(new InputStreamReader(System.in));	// i object for reading strings
+static Scanner j = new Scanner(System.in);					// j object for integer and other numeric inputs
 double bal;
 int acc_no;
 
-Account()
+Account()                
 {
-bal = (int)(Math.random() * 40000 + 10000);
+bal = (int)(Math.random() * 40000 + 10000);               /// to get a random balance in account 
 
 }
 String name,acc_type;
-static String passwd= "admin";
+static String passwd= "admin";                           /// just to illustrate security importance 
 
 static void printf(String line)
 {
 
-System.out.print(line);
+System.out.print(line);                                  /// System.out.println() is quite redundant to use so printf() !!!
 
 }
-void get_data()
+void get_data()                                          /// function to get user data like name and account type
 throws IOException{
 printf("Enter your name    ");
 name = i.readLine();
@@ -52,7 +52,7 @@ acc_no = j.nextInt();
 
 }
 
-void display()
+void display()							// to display the user information like account number etc!
 {
 
 printf(" \n\n\n NAME           : " + name.toUpperCase() + " \n " + "ACCOUNT NUMBER : " + acc_no + " \n ACCOUNT TYPE   : " + acc_type.toUpperCase() + " \n BALANCE        : " + bal + " \n\n\n"); 
@@ -60,7 +60,7 @@ printf(" \n\n\n NAME           : " + name.toUpperCase() + " \n " + "ACCOUNT NUMB
 
 
 void withdraw()
-throws IOException{
+throws IOException{ 						// IOException to handle run time i/o errors
 int amount;
 printf("\nenter the amount to withdraw\n\n");
 amount = j.nextInt();
@@ -105,7 +105,7 @@ String passwd;
 int n;
 int x=0,count;
 Account[] obj = new Account[100];
-do
+do									// menu driven format 
 {
 Runtime.getRuntime().exec("clear");
 printf("press 1 to create account ");
