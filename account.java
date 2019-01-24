@@ -104,7 +104,7 @@ int id=0;
 String passwd;
 int n;
 int x=0,count;
-Account[] obj = new Account[100];
+Account[] obj = new Account[100];					// array of objects 
 do									// menu driven format 
 {
 Runtime.getRuntime().exec("clear");
